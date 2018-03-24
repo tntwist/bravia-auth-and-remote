@@ -2,7 +2,7 @@
 
 set -e
 
-if [ "$1" = "" ] || [ "$2" = "" ] || ["$3" = ""]; then
+if [ "$1" = "" ] || [ "$2" = "" ] || [ "$3" = "" ]; then
   echo "Usage of Sony Bravia IRCC Sender: $0 TV_IP IRCC_COMMAND X-AUTH-PSK"
   exit 1
 fi
