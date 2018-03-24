@@ -7,7 +7,9 @@ if [ "$1" = "" ] || [ "$2" = "" ] || [ "$3" = "" ]; then
   exit 1
 fi
 
-available_commands=$(./print_ircc_codes.sh $1)
+DIR="$(cd "$(dirname "$0")" && pwd)"
+
+available_commands=$($DIR/print_ircc_codes.sh $1)
 found_command=$( echo "$available_commands"  | grep -w -A 1 "$2" || :)
 
 if [ "$found_command" = "" ]; then
